@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "TakeUntilConfig",
+  "title": "TakeUntil Configuration",
+  "type": "object",
+  "properties": {
+    "destroyPropertyName": {
+      "type": "string",
+      "description": "Name for the destroy subject property",
+      "default": "destroy$"
+    },
+    "ignorePatterns": {
+      "type": "array",
+      "description": "File patterns to ignore",
+      "items": {
+        "type": "string"
+      },
+      "default": ["**/*.spec.ts", "**/*.test.ts", "**/node_modules/**"]
+    },
+    "customDestroyMethods": {
+      "type": "array",
+      "description": "Custom method names that indicate proper cleanup",
+      "items": {
+        "type": "string"
+      },
+      "default": ["ngOnDestroy", "destroy", "cleanup", "unsubscribe"]
+    },
+    "skipAsyncPipe": {
+      "type": "boolean",
+      "description": "Skip components that use async pipe extensively",
+      "default": true
+    },
+    "logLevel": {
+      "type": "string",
+      "enum": ["silent", "info", "verbose"],
+      "description": "Logging level for the schematic",
+      "default": "info"
+    }
+  }
+}

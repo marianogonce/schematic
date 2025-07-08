@@ -1,0 +1,9 @@
+{
+  "schematics": {
+    "add-takeuntil": {
+      "description": "Add takeUntil pattern to RxJS subscriptions in Angular components, directives and injectables",
+      "factory": "./add-takeuntil/index#addTakeUntil",
+      "schema": "./add-takeuntil/schema.json"
+    }
+  }
+}

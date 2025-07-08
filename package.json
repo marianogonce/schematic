@@ -1,0 +1,38 @@
+{
+  "name": "ng-add-takeuntil",
+  "version": "1.0.0",
+  "description": "Angular schematic to automatically add takeUntil pattern to RxJS subscriptions",
+  "main": "dist/collection.json",
+  "schematics": "./dist/collection.json",
+  "scripts": {
+    "build": "tsc && npm run copy:json",
+    "copy:json": "xcopy /S /Y src\\*.json dist\\",
+    "test": "node test.js",
+    "test:dry": "npm run build && schematics .:add-takeuntil --dry-run --force",
+    "package:local": "node package-local.js",
+    "clean": "rimraf dist"
+  },
+  "keywords": [
+    "angular",
+    "schematic",
+    "rxjs",
+    "takeuntil",
+    "subscription",
+    "memory-leak"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@angular-devkit/core": "^20.0.5",
+    "@angular-devkit/schematics": "^20.0.5",
+    "ts-morph": "^26.0.0",
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@angular-devkit/schematics-cli": "^20.0.5",
+    "@types/node": "^24.0.10"
+  },
+  "peerDependencies": {
+    "@angular/core": ">=10.0.0"
+  }
+}

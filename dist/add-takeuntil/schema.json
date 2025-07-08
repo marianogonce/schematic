@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "AddTakeUntilSchema",
+  "title": "Add TakeUntil Schema",
+  "type": "object",
+  "properties": {
+    "path": {
+      "type": "string",
+      "description": "The path where to apply the transformation.",
+      "default": "src",
+      "$default": {
+        "$source": "workingDirectory"
+      }
+    },
+    "project": {
+      "type": "string",
+      "description": "The name of the project to apply the transformation to."
+    },
+    "skipImport": {
+      "type": "boolean",
+      "description": "Skip adding imports for RxJS operators.",
+      "default": false
+    },
+    "dryRun": {
+      "type": "boolean",
+      "description": "Run without making any changes.",
+      "default": false
+    }
+  },
+  "required": []
+}
